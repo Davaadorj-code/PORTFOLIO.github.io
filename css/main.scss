@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+html {
+    display: grid;
+    justify-items: center;
+}
+html[data-theme='pink']{   
+    --bg: #A45EFF;
+}
+body{
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', 'Arial';
+    background-color: var(--bg);
+ }
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+.nav-header{
+    background: #6700FF;
+    a{
+        color: white;
+    }
+}
+header{
+    display: flex;  
+    justify-content: space-between;
+    padding: 2em;
+    .logo{
+        color: #00F7FF;
+        font-weight: bold;
+    }
+    ul{
+        display: flex;
+        a{
+            display: block;
+            padding: 0 1em;
+        }
+    }
+}
+.facebook-icon, .twitch-icon, .instagram-icon{
+    transition: all .4s;
+}
+.facebook-icon:hover{
+    display: inline-block;
+    transform: scale(1.5);
+    color: blue;
+}
+.instagram-icon:hover{
+    display: inline-block;
+    transform: scale(1.5);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 220px;
+    line-height: 250px;
+    vertical-align: middle;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+.twitch-icon:hover{
+    display: inline-block;
+    transform: scale(1.5);
+    color: #6441A4;
+}
+.social-header, .goal-design{
+    display: none;
+}
+.goal{
+    background: #6700FF;
+    color: white;
+    display: grid;
+    text-align: center;
+    padding: 4em; 
+}
+.switch-me{
+    display: flex;
+    margin: 0 auto;
+    width: 200px;
+    font-weight: bold;
+    color: #FF64CB;
+    p{
+        font-style: bold;
+    }
+}
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+label{
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: #285AEB;
+    float: left;
+    border-radius: 100px;
+    position: relative;
+}
+label:after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+input:checked + label{
+    background-color: var(--bg);
+}
+input:checked + label:after{
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+label:active:after{
+    width: 45px;
+}
+section{
+    padding: 4em 2em;
+    text-align: center;
+}
+.featured{
+    position: relative;
+    .left{
+        border-radius: 20px;
+        width: 45em;
+        height: auto;
+    }
+}
+.featured::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #E5D5FA;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.subtitle{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #6E00FF;
+    letter-spacing: .2em;
+    font-size: 1em;
+}
+.featured-title{
+    color: black;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-top: -.5em;
+    display: block;
+}
+.featured-desc{
+    color: #3b3b3b;
+    margin-bottom: 6em;
+    font-size: 1em;
+    line-height: 1.8em;
+    font-weight: 500;
+    text-align: justify;
+}
+.skills{
+    background: #FF64CB;
+    position: relative;
+    top: -1em;
+}
+.skills-container ul li{
+    background: white;
+    padding: 2em; 
+    border-radius: 1em;
+    margin-bottom: 1em;
+    .icon-container{
+        height: 100px;
+        display: grid;
+        place-content: center;
+        margin: 0 auto;
+        &.one{
+            width: 50px;
+        }
+        &.two{
+            width: 100px;
+        }
+        &.three{
+            width: 60px;
+        }
+    }
+    .skill-title{
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+    .featured-desc{
+        margin-bottom: 2em;
+    }
+}
+.portfolio{
+    background: #F7F7F7;
+}
+.portfolio-container img{
+    border-radius: 20px;
+    margin-bottom: 2em;
+}
+@media only screen and (min-width: 800px){
+    .featured, .portfolio{
+        text-align: left;
+    }
+    .featured, .portfolio-container{
+        display: grid;
+        grid-template-columns: 40% auto;
+    }
+    .right{
+        margin-left: 2em;
+        margin-top: 1em;
+    } 
+    .left, .portfolio-left{
+        display: grid;
+        place-content: center;
+    }
+    .skills{
+        margin-top: -5em;
+        margin-bottom: -7em;
+        padding-top: 7em;
+    }
+    .skills-container ul{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 1em;
+    }
+    .portfolio{
+        padding-top: 7em;
+    }
+    .portfolio-container img{
+        margin-left: 2em;
+    }
+}
+@media only screen and (min-width: 1050px){
+    .goal{
+        height: 90vh;
+    }
+    .nav-header{
+        display: grid;
+        grid-template-columns: 66% auto;
+        background: unset;
+        header{
+            background: #6700FF;
+        }
+    }
+    header{
+        padding: 2em 2em 2em 4em;
+    }
+    .social-header{
+        padding: 2em 4em 2em 0;
+    }
+    section{
+        padding: 4em;
+    }
+    .social-header{
+        display: block;
+        ul{
+            display: flex;
+            justify-content: space-between;
+            width: 7em;
+            float: right;
+            img{
+                width: 20px;
+            }
+        }
+    }
+    .goal{
+        display: grid;
+        grid-template-columns: 66% auto;
+        background: unset;
+        padding: 0;
+        .content{
+            background: #6E00FF;
+            padding: 6em 8em 6em 4em;
+            text-align: left;
+            h1{
+                font-size: 3em;
+                line-height: 1.2em;
+            }
+        }
+    }
+    .switch-me{
+        margin: unset;
+    }
+    .goal-design{
+        display: unset;
+        margin-left: -50%;
+        margin-top: 15%;
+        width: 100%;
+    }
+    .portfolio img{
+        float: right;
+        max-width: 500px;
+    }
+}
+@media only screen and (min-width: 1250px){
+    header{
+        padding: 2em 2em 2em 10em;
+    }
+    .social-header{
+        padding: 2em 10em 2em 0;
+    }
+    section{
+        padding: 10em 10em 4em 10em;
+    }
+    .goal .content{
+        padding: 6em 8em 6em 10em;
+    }
+}
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}

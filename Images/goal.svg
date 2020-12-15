@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="681" viewBox="0 0 680 681">
+  <g id="Goal" transform="translate(-805 -170)">
+    <rect id="Rectangle_4" data-name="Rectangle 4" width="170" height="170" rx="30" transform="translate(1145 170)" fill="#6700ee"/>
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="170" height="170" rx="30" transform="translate(975 340)" fill="#fff"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="170" height="170" rx="30" transform="translate(1145 510)" fill="#6700ee"/>
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="170" height="170" rx="30" transform="translate(805 510)" fill="#fff" opacity="0.29"/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" width="170" height="170" rx="30" transform="translate(976 681)" fill="#fff"/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" width="170" height="170" rx="30" transform="translate(1315 340)" fill="#6700ee" opacity="0.29"/>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="85" cy="85" r="85" transform="translate(1145 340)" fill="#ff64cb"/>
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="85" cy="85" r="85" transform="translate(976 511)" fill="#fff"/>
+    <circle id="Ellipse_4" data-name="Ellipse 4" cx="85" cy="85" r="85" transform="translate(976 511)" fill="#00f7ff"/>
+  </g>
+</svg>
